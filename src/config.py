@@ -1,10 +1,10 @@
-BOT_TOKEN = ''  #replace with your token
+BOT_TOKEN = '6689705042:AAEp7Ag3ZF5XAsFRmVLteaztnGHz4hpdU58'  #replace with your token
 VERSION = 'beta 1.3'
 
 currency = '$'
 
 items = {
-    'Item1': 100,
-    'Item2': 200,
-    'Item3': 500
+    'Item1': 1,
+    'Item2': 2,
+    'Item3': 3
 }

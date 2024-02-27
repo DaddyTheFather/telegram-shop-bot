@@ -1,0 +1,152 @@
+INFO:aiogram:Bot: BuyBotTest [@EdTestBuyBot]
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-33' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ChatNotFound('Chat not found')>
+Traceback (most recent call last):
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 76, in vote_up_cb_handler
+    await notify_admins_order(order_id=order_id)
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 27, in notify_admins_order
+    await bot.send_message(chat_id=admin_id, text=f'\u2757 Check out a new order!\nOrder id: {order_id}\n')
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=InvalidQueryID('Query is too old and response timeout expired or query id is invalid')>
+Traceback (most recent call last):
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 43, in process_callback_items
+    await callback_query.answer()
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\types\callback_query.py", line 57, in answer
+    return await self.bot.answer_callback_query(callback_query_id=self.id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\bot.py", line 2758, in answer_callback_query
+    return await self.request(api.Methods.ANSWER_CALLBACK_QUERY, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.InvalidQueryID: Query is too old and response timeout expired or query id is invalid
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-47' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ChatNotFound('Chat not found')>
+Traceback (most recent call last):
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 76, in vote_up_cb_handler
+    await notify_admins_order(order_id=order_id)
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 27, in notify_admins_order
+    await bot.send_message(chat_id=admin_id, text=f'\u2757 Check out a new order!\nOrder id: {order_id}\n')
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+INFO:aiogram.dispatcher.dispatcher:Stop polling...
+WARNING:aiogram:Goodbye!
+INFO:aiogram:Bot: BuyBotTest [@EdTestBuyBot]
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=InvalidQueryID('Query is too old and response timeout expired or query id is invalid')>
+Traceback (most recent call last):
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\Documents\GitHub\telegram-shop-bot\src\main.py", line 55, in process_callback_developer
+    await callback_query.answer('Bot developer is @hedgepay_ed\nTelegram channel: @hedgepay\nGithub: https://github.com/DaddyTheFather')
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\types\callback_query.py", line 57, in answer
+    return await self.bot.answer_callback_query(callback_query_id=self.id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\bot.py", line 2758, in answer_callback_query
+    return await self.request(api.Methods.ANSWER_CALLBACK_QUERY, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\keech\.pyenv\pyenv-win\versions\3.11.0b4\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.InvalidQueryID: Query is too old and response timeout expired or query id is invalid

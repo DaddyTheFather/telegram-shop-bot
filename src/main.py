@@ -52,7 +52,7 @@ async def process_callback_my_orders(callback_query: types.CallbackQuery):
 
 @dp.callback_query_handler(lambda c: c.data == 'developer')
 async def process_callback_developer(callback_query: types.CallbackQuery):
-    await callback_query.answer('Bot developer is @anekobtw\nTelegram channel: @anekobtww\nGithub: https://github.com/anekobtw')
+    await callback_query.answer('Bot developer is @hedgepay_ed\nTelegram channel: @hedgepay\nGithub: https://github.com/DaddyTheFather')
 
 
 # <<< Items >>>
